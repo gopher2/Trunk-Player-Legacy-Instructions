@@ -78,8 +78,8 @@ curl https://raw.githubusercontent.com/gopher2/Trunk-Player-Legacy-Instructions/
 ## Setup Nginx and Supervisor
 ```
 sudo mkdir /var/log/trunk-player
-touch /var/log/trunk-player/daphne_main.log
-chmod o+w /var/log/trunk-player/daphne_main.log
+sudo touch /var/log/trunk-player/daphne_main.log
+sudo chmod o+w /var/log/trunk-player/daphne_main.log
 cp trunk_player/trunk_player.nginx.sample trunk_player/trunk_player.nginx
 sudo ln -s /home/radio/trunk-player/trunk_player/trunk_player.nginx /etc/nginx/sites-enabled/
 sudo rm /etc/nginx/sites-enabled/default
