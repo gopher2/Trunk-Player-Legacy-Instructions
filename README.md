@@ -21,3 +21,15 @@ sudo bash -c 'echo SUBSYSTEM=="usb", ATTRS{idVendor}=="1d50", ATTRS{idProduct}==
 sudo chmod u=rw,g=r,o=r /etc/udev/rules.d/airspy.rules
 sudo udevadm control --reload-rules
 ```
+
+## Download and install Trunk-Recorder
+```
+cd ~
+mkdir trunk-recorder-build
+git clone https://github.com/robotastic/trunk-recorder.git
+cd trunk-recorder-build
+cmake ../trunk-recorder
+make -j$(nproc)
+```
+
+
