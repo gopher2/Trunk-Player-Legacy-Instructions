@@ -31,7 +31,7 @@ git clone https://github.com/robotastic/trunk-recorder.git
 cd trunk-recorder-build
 cmake ../trunk-recorder
 make -j$(nproc)
-curl https://github.com/gopher2/Trunk-Player-Legacy-Instructions/blob/main/config-airspymini.json -o config.json
+curl https://raw.githubusercontent.com/gopher2/Trunk-Player-Legacy-Instructions/main/config-airspymini.json -o config.json
 cp /home/radio/trunk-recorder/examples/auto-restart.sh /home/radio/trunk-recorder-build/
 chmod +x /home/radio/trunk-recorder-build/auto-restart.sh
 curl https://raw.githubusercontent.com/gopher2/Trunk-Player-Legacy-Instructions/main/trunk-recorder.service -o trunk-recorder.service
