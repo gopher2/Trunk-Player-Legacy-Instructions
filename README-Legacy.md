@@ -70,7 +70,7 @@ unset dbpass
 ```
 curl https://raw.githubusercontent.com/gopher2/Trunk-Player-Legacy-Instructions/main/talkgroups_mpscs.csv -o talkgroups.csv
 ./manage.py migrate
-./manage.py import_talkgroups --system 0 --truncate talkgroups.csv
+./manage.py import_talkgroups --system 0 --truncate talkgroups.csv --rr
 ./manage.py collectstatic --noinput
 ./manage.py createsuperuser
 ```
