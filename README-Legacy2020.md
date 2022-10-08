@@ -44,6 +44,7 @@ sudo systemctl enable trunk-recorder.service
 
 ## Download and install Trunk-Player
 ```
+cd ~
 git clone https://github.com/gopher2/trunk-player.git
 cd trunk-player
 virtualenv -p python3 env --prompt='(Trunk Player)'
