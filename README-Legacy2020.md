@@ -55,13 +55,21 @@ sed -i "s/SITE_TITLE = 'Trunk-Player'/SITE_TITLE = 'MPSCS'/g" trunk_player/setti
 sed -i "s/AUDIO_URL_BASE = '\/\/s3.amazonaws.com\/SET-TO-MY-BUCKET\/'/AUDIO_URL_BASE = '\/audio_files\/'/g" trunk_player/settings_local.py
 echo TIME_ZONE = \'America/Detroit\' >> trunk_player/settings_local.py
 unset djpass
+curl https://raw.githubusercontent.com/gopher2/Trunk-Player-Legacy-Instructions/main/postgres_setup.sql -o postgres_setup.sql
+dbpass=$(cat /dev/urandom | tr -dc 'a-zA-Z0-9-_!@#+' | fold -w 12 | head -n 1)
+sed -i "s/'PASSWORD': 'fake_password',/'PASSWORD': '$dbpass',/" trunk_player/settings_local.py
+sed -i "s/__DB_PASS__/$dbpass/g" postgres_setup.sql
+sudo chown postgres postgres_setup.sql
+sudo -u postgres psql < postgres_setup.sql
+rm -rf postgres_setup.sql
+unset dbpass
 ```
 
 ## Import Talkgroups
 ```
 curl https://raw.githubusercontent.com/gopher2/Trunk-Player-Legacy-Instructions/main/talkgroups_mpscs.csv -o talkgroups.csv
 ./manage.py migrate
-./manage.py import_talkgroups --system 0 --truncate talkgroups.csv
+./manage.py import_talkgroups --system 0 --truncate talkgroups.csv --rr
 ./manage.py collectstatic --noinput
 ./manage.py createsuperuser
 ```
