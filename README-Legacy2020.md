@@ -56,3 +56,12 @@ sed -i "s/AUDIO_URL_BASE = '\/\/s3.amazonaws.com\/SET-TO-MY-BUCKET\/'/AUDIO_URL_
 echo TIME_ZONE = \'America/Detroit\' >> trunk_player/settings_local.py
 unset djpass
 ```
+
+## Import Talkgroups
+```
+curl https://raw.githubusercontent.com/gopher2/Trunk-Player-Legacy-Instructions/main/talkgroups_mpscs.csv -o talkgroups.csv
+./manage.py migrate
+./manage.py import_talkgroups --system 0 --truncate talkgroups.csv
+./manage.py collectstatic --noinput
+./manage.py createsuperuser
+```
