@@ -1,0 +1,26 @@
+{
+        "ver": 2,
+        "sources": [{
+                "center": 852525000,
+                "rate": 6000000,
+                "error": 0,
+                "mixGain": 17,
+                "lnaGain": 17,
+                "gain": 17,
+                "digitalRecorders": 30,
+                "driver": "osmosdr",
+                "modulation": "qpsk"
+
+        }],
+        "systems": [{
+                "control_channels": [853987500],
+                "type": "p25",
+                "recordUnknown": true,
+                "shortName": "MPSCS",
+                "talkgroupsFile": "talkgroups.csv",
+                "uploadScript": "encode-local-sys-0.sh",
+                "talkgroupDisplayFormat": "tag_id",
+                "digitalLevels": 8
+        }],
+"captureDir": "/home/radio/trunk-player/audio_files"
+}
