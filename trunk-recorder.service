@@ -1,0 +1,13 @@
+[Unit]
+Description=Trunk Recorder Script
+
+[Service]
+User=radio
+Group=radio
+Environment="PATH=/usr/local/bin:/usr/bin:/bin"
+WorkingDirectory=/home/radio/trunk-recorder-build
+ExecStart=/home/radio/trunk-recorder-build/auto-restart.sh
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
