@@ -74,3 +74,19 @@ curl https://raw.githubusercontent.com/gopher2/Trunk-Player-Legacy-Instructions/
 ./manage.py collectstatic --noinput
 ./manage.py createsuperuser
 ```
+
+## Setup Nginx and Supervisor
+
+sudo mkdir /var/log/trunk-player
+touch /var/log/trunk-player/daphne_main.log
+chmod o+w /var/log/trunk-player/daphne_main.log
+cp trunk_player/trunk_player.nginx.sample trunk_player/trunk_player.nginx
+sudo ln -s /home/radio/trunk-player/trunk_player/trunk_player.nginx /etc/nginx/sites-enabled/
+sudo rm /etc/nginx/sites-enabled/default
+sudo systemctl restart nginx
+cp trunk_player/supervisor.conf.sample trunk_player/supervisor.conf
+sudo ln -f -s /home/radio/trunk-player/trunk_player/supervisor.conf /etc/supervisor/conf.d/trunk_player.conf
+sudo supervisorctl reread
+sudo supervisorctl update
+cp /home/radio/trunk-player/utility/trunk-recoder/encode-local-sys-0.sh  /home/radio/trunk-recorder-build/encode-local-sys-0.sh
+sudo supervisorctl start trunkplayer:
