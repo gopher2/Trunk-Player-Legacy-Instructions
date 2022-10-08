@@ -76,7 +76,7 @@ curl https://raw.githubusercontent.com/gopher2/Trunk-Player-Legacy-Instructions/
 ```
 
 ## Setup Nginx and Supervisor
-
+```
 sudo mkdir /var/log/trunk-player
 touch /var/log/trunk-player/daphne_main.log
 chmod o+w /var/log/trunk-player/daphne_main.log
@@ -90,3 +90,4 @@ sudo supervisorctl reread
 sudo supervisorctl update
 cp /home/radio/trunk-player/utility/trunk-recoder/encode-local-sys-0.sh  /home/radio/trunk-recorder-build/encode-local-sys-0.sh
 sudo supervisorctl start trunkplayer:
+```
