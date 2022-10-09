@@ -31,7 +31,7 @@ mkdir trunk-recorder-build
 git clone https://github.com/robotastic/trunk-recorder.git
 cd trunk-recorder
 git checkout dcbbc4e641302cb93997c130f2cd0e5edfbee63a
-cd ..\trunk-recorder-build
+cd ~
 cmake ../trunk-recorder
 make -j$(nproc)
 curl https://raw.githubusercontent.com/gopher2/Trunk-Player-Legacy-Instructions/main/config-airspymini.json -o config.json
