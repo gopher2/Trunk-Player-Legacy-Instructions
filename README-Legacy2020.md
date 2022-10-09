@@ -78,7 +78,7 @@ curl https://raw.githubusercontent.com/gopher2/Trunk-Player-Legacy-Instructions/
 ./manage.py createsuperuser
 ```
 
-## Setup Nginx and Supervisor
+## Setup Nginx and Supervisor, start the recorder
 ```
 cp trunk_player/trunk_player.nginx.sample trunk_player/trunk_player.nginx
 sudo ln -s /home/radio/trunk-player/trunk_player/trunk_player.nginx /etc/nginx/sites-enabled/
@@ -90,5 +90,6 @@ sudo supervisorctl reread
 sudo supervisorctl update
 cp /home/radio/trunk-player/utility/trunk-recoder/encode-local-sys-0.sh  /home/radio/trunk-recorder-build/encode-local-sys-0.sh
 sudo supervisorctl start trunkplayer:
+sudo systemctl start trunk-recorder.service
 ```
 
