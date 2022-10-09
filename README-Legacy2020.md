@@ -1,10 +1,10 @@
 ## Trunk-Recorder and Trunk-Player (Legacy) Instructions
 
-This will guide you on the process of installing Trunk-Recorder and Trunk-Player. It is specific to setting up a Airspy device on the on the MPSCS but can be customized for other radio / systems. 
+This will guide you on the process of installing Trunk-Recorder and Trunk-Player. It is specific to setting up a Airspy device on the on the MPSCS but can be customized for other radio / systems. It depends on the specific version of Ubuntu listed, other versions will not work.
 
 ## Install the OS
 
-- Start with a fresh install of Ubuntu 22.04.1 LTS x64
+- Start with a fresh install of Ubuntu 20.04.5 LTS x64
 - Add a user 'radio' during the OS install
 
 ## Update the system
