@@ -68,11 +68,26 @@ rm -rf postgres_setup.sql
 unset dbpass
 ```
 
-## Import Talkgroups
+## Import Talkgroups and run Database Migrations
 ```
 curl https://raw.githubusercontent.com/gopher2/Trunk-Player-Legacy-Instructions/main/talkgroups_mpscs.csv -o talkgroups.csv
 ./manage.py migrate
-./manage.py import_talkgroups --system 0 --truncate talkgroups.csv --rr
+./manage.py import_talkgroups --system 0 --truncate talkgroups.csv 
 ./manage.py collectstatic --noinput
 ./manage.py createsuperuser
 ```
+
+##Setup Nginx and Supervisor
+```
+cp trunk_player/trunk_player.nginx.sample trunk_player/trunk_player.nginx
+sudo ln -s /home/radio/trunk-player/trunk_player/trunk_player.nginx /etc/nginx/sites-enabled/
+sudo rm /etc/nginx/sites-enabled/default
+sudo systemctl restart nginx
+cp trunk_player/supervisor.conf.sample trunk_player/supervisor.conf
+sudo ln -f -s /home/radio/trunk-player/trunk_player/supervisor.conf /etc/supervisor/conf.d/trunk_player.conf
+sudo supervisorctl reread
+sudo supervisorctl update
+cp /home/radio/trunk-player/utility/trunk-recoder/encode-local-sys-0.sh  /home/radio/trunk-recorder-build/encode-local-sys-0.sh
+sudo supervisorctl start trunkplayer:
+```
+
