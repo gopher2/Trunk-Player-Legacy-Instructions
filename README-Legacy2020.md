@@ -71,7 +71,7 @@ unset dbpass
 
 ## Import Talkgroups and run Database Migrations
 ```
-curl https://raw.githubusercontent.com/gopher2/Trunk-Player-Legacy-Instructions/main/talkgroups_mpscs.csv -o talkgroups.csv
+curl https://raw.githubusercontent.com/gopher2/Trunk-Player-Legacy-Instructions/main/talkgroups_mpscs_old.csv -o talkgroups.csv
 ./manage.py migrate
 ./manage.py import_talkgroups --system 0 --truncate talkgroups.csv 
 ./manage.py collectstatic --noinput
