@@ -52,8 +52,10 @@ source env/bin/activate
 pip install -r requirements.txt
 cp trunk_player/settings_local.py.sample trunk_player/settings_local.py
 djpass=$(cat /dev/urandom | tr -dc 'a-zA-Z0-9-_!@#+' | fold -w 64 | head -n 1)
+ip4=`ip route get 8.8.8.8 | sed -n '/src/{s/.*src *\([^ ]*\).*/\1/p;q}'`
+
 sed -i "s/^SECRET_KEY = .*/SECRET_KEY = '$djpass'/" trunk_player/settings_local.py
-sed -i "s/ALLOWED_HOSTS = \[\]/ALLOWED_HOSTS = \['10.1.10.108'\]/g" trunk_player/settings_local.py
+sed -i "s/ALLOWED_HOSTS = \[\]/ALLOWED_HOSTS = \['$ipv4'\]/g" trunk_player/settings_local.py
 sed -i "s/SITE_TITLE = 'Trunk-Player'/SITE_TITLE = 'MPSCS'/g" trunk_player/settings_local.py
 sed -i "s/AUDIO_URL_BASE = '\/\/s3.amazonaws.com\/SET-TO-MY-BUCKET\/'/AUDIO_URL_BASE = '\/audio_files\/'/g" trunk_player/settings_local.py
 echo TIME_ZONE = \'America/Detroit\' >> trunk_player/settings_local.py
