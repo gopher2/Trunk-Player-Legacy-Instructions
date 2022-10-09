@@ -69,7 +69,7 @@ rm -rf postgres_setup.sql
 unset dbpass
 ```
 
-## Import Talkgroups and run Database Migrations
+## Import Talkgroups, run Database Migrations, add a user
 ```
 curl https://raw.githubusercontent.com/gopher2/Trunk-Player-Legacy-Instructions/main/talkgroups_mpscs_old.csv -o talkgroups.csv
 ./manage.py migrate
