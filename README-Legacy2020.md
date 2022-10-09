@@ -34,7 +34,6 @@ cmake ../trunk-recorder
 make -j$(nproc)
 curl https://github.com/gopher2/Trunk-Player-Legacy-Instructions/blob/main/config-airspymini.json -o config.json
 cp /home/radio/trunk-recorder/examples/auto-restart.sh /home/radio/trunk-recorder-build/
-sed -i '1 i\#!/bin/sh' ./auto-restart.sh
 chmod +x /home/radio/trunk-recorder-build/auto-restart.sh
 curl https://raw.githubusercontent.com/gopher2/Trunk-Player-Legacy-Instructions/main/trunk-recorder.service -o trunk-recorder.service
 sudo mv trunk-recorder.service /etc/systemd/system/trunk-recorder.service
