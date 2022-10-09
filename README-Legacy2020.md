@@ -78,7 +78,7 @@ curl https://raw.githubusercontent.com/gopher2/Trunk-Player-Legacy-Instructions/
 ./manage.py createsuperuser
 ```
 
-##Setup Nginx and Supervisor
+## Setup Nginx and Supervisor
 ```
 cp trunk_player/trunk_player.nginx.sample trunk_player/trunk_player.nginx
 sudo ln -s /home/radio/trunk-player/trunk_player/trunk_player.nginx /etc/nginx/sites-enabled/
