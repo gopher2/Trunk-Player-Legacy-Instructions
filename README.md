@@ -23,3 +23,9 @@ Supervisor (Application Server)
 - Stop: ```sudo supervisorctl stop trunkplayer:```
 - Start: ```sudo supervisorctl start trunkplayer:```
 - Restart: ```sudo supervisorctl reop trunkplayer:```
+
+Postgres Database
+- Delete database and user: 
+sudo -i -u postgres psql -U postgres -c "DROP USER trunk_player_user"
+sudo -i -u postgres psql -U postgres -c "DROP DATABASE trunk_player"
+
