@@ -9,7 +9,7 @@ Me and my friends enjoy setting up trunk-recorder / trunk-player servers and hav
 
 # Tips and Tricks
 
--Trunk Recorder
+Trunk Recorder
 - Stop
 ```sudo systemctl stop trunk-recorder```
 - Start
@@ -17,7 +17,7 @@ Me and my friends enjoy setting up trunk-recorder / trunk-player servers and hav
 - Restart 
 ```sudo systemctl restart trunk-recorder```
 
--Nginx (webserver)
+Nginx (webserver)
 - Stop
 ```sudo systemctl stop nginx.service```
 - Start
