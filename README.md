@@ -10,24 +10,16 @@ Me and my friends enjoy setting up trunk-recorder / trunk-player servers and hav
 # Tips and Tricks
 
 Trunk Recorder
-- Stop
-```sudo systemctl stop trunk-recorder```
-- Start
-```sudo systemctl start trunk-recorder```
-- Restart 
-```sudo systemctl restart trunk-recorder```
+- Stop: ```sudo systemctl stop trunk-recorder```
+- Start: ```sudo systemctl start trunk-recorder```
+- Restart ```sudo systemctl restart trunk-recorder```
 
-Nginx (webserver)
-- Stop
-```sudo systemctl stop nginx.service```
-- Start
-```sudo systemctl start nginx.service```
-- Restart
-```sudo systemctl restart nginx.service```
+Nginx (webserver/proxy)
+- Stop: ```sudo systemctl stop nginx.service```
+- Start: ```sudo systemctl start nginx.service```
+- Restart: ```sudo systemctl restart nginx.service```
 
-Stop the  (Web Server)
-```sudo systemctl stop nginx.service```
-Start the trunk-recorder service
-```sudo systemctl start nginx.service```
-Restart the trunk-recorder service
-```sudo systemctl restart nginx.service```
+Supervisor (Application Server)
+- Stop: ```sudo supervisorctl stop trunkplayer:```
+- Start: ```sudo supervisorctl start trunkplayer:```
+- Restart: ```sudo supervisorctl reop trunkplayer:```
