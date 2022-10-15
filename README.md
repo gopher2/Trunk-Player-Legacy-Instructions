@@ -8,18 +8,21 @@ Me and my friends enjoy setting up trunk-recorder / trunk-player servers and hav
 
 
 # Tips and Tricks
-- Stop the trunk-recorder service
+
+-Trunk Recorder
+- Stop
 ```sudo systemctl stop trunk-recorder```
-- Start the trunk-recorder service
+- Start
 ```sudo systemctl start trunk-recorder```
-- Restart the trunk-recorder service
+- Restart 
 ```sudo systemctl restart trunk-recorder```
 
-Stop the nginx service (Web Server)
+-Nginx (webserver)
+- Stop
 ```sudo systemctl stop nginx.service```
-Start the nginx service 
+- Start
 ```sudo systemctl start nginx.service```
-Restart the nginx service
+- Restart
 ```sudo systemctl restart nginx.service```
 
 Stop the  (Web Server)
