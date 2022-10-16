@@ -62,7 +62,7 @@ dbpass=$(cat /dev/urandom | tr -dc 'a-zA-Z0-9-_!@#+' | fold -w 12 | head -n 1)
 sed -i "s/'PASSWORD': 'fake_password',/'PASSWORD': '$dbpass',/" trunk_player/settings_local.py
 sed -i "s/__DB_PASS__/$dbpass/g" postgres_setup.sql
 sudo chown postgres postgres_setup.sql
-sudo -u postgres psql < postgres_setup.sql
+sudo -i -u postgres psql < postgres_setup.sql
 rm -rf postgres_setup.sql
 unset dbpass
 ```
