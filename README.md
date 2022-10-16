@@ -13,11 +13,13 @@ Trunk Recorder
 - Stop: ```sudo systemctl stop trunk-recorder```
 - Start: ```sudo systemctl start trunk-recorder```
 - Restart ```sudo systemctl restart trunk-recorder```
+- Live Logs ```sudo journalctl -f -u trunk-recorder.service```
 
 Nginx (webserver/proxy)
 - Stop: ```sudo systemctl stop nginx.service```
 - Start: ```sudo systemctl start nginx.service```
 - Restart: ```sudo systemctl restart nginx.service```
+- Live Logs: ```sudo tail -f /var/log/nginx/*```
 
 Supervisor (Application Server)
 - Stop: ```sudo supervisorctl stop trunkplayer:```
@@ -26,6 +28,7 @@ Supervisor (Application Server)
 
 Postgres Database
 - Delete database and user: 
-sudo -i -u postgres psql -U postgres -c "DROP USER trunk_player_user"
 sudo -i -u postgres psql -U postgres -c "DROP DATABASE trunk_player"
+sudo -i -u postgres psql -U postgres -c "DROP USER trunk_player_user"
+
 
