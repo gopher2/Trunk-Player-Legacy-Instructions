@@ -1,4 +1,4 @@
-# Various Instructions
+# Instructions
 
 I enjoy setting up trunk-recorder / trunk-player servers and have multiple instances deployed across the state of Michigan. Below are step by step instructions we use as a reference when deploying sites.
 
