@@ -85,6 +85,7 @@ cp trunk_player/trunk_player.nginx.sample trunk_player/trunk_player.nginx
 sudo ln -s /home/radio/trunk-player/trunk_player/trunk_player.nginx /etc/nginx/sites-enabled/
 sudo rm /etc/nginx/sites-enabled/default
 sudo sed -e '/proxy_set_header X-Forwarded-Proto https;/ s/^#*/#/' -i /etc/nginx/sites-enabled/trunk_player.nginx
+sudo sed -i "s/user www-data;/user radio;/g" /etc/nginx/nginx.conf
 sudo systemctl restart nginx
 cp trunk_player/supervisor.conf.sample trunk_player/supervisor.conf
 sudo ln -f -s /home/radio/trunk-player/trunk_player/supervisor.conf /etc/supervisor/conf.d/trunk_player.conf
