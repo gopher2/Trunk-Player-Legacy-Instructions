@@ -1,6 +1,6 @@
 # Various Instructions
 
-Me and my friends enjoy setting up trunk-recorder / trunk-player servers and have multiple instances deployed across the state of Michigan. Below are step by step instructions on how to deploy a working site. 
+I enjoy setting up trunk-recorder / trunk-player servers and have multiple instances deployed across the state of Michigan. Below are step by step instructions we use as a reference when deploying sites.
 
 - [Trunk-Player (latest) on Ubuntu 22.04 w/Airspy Mini](https://github.com/gopher2/Trunk-Player-Legacy-Instructions/blob/main/README-Legacy.md)
 
