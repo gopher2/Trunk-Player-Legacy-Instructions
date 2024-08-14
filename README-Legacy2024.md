@@ -79,6 +79,8 @@ curl https://raw.githubusercontent.com/gopher2/Trunk-Player-Legacy-Instructions/
 
 ## Setup Nginx and Supervisor, start the recorder
 ```
+sudo mkdir /var/log/trunk-player
+sudo chown radio:radio /var/log/trunk-player
 cp trunk_player/trunk_player.nginx.sample trunk_player/trunk_player.nginx
 sudo ln -s /home/radio/trunk-player/trunk_player/trunk_player.nginx /etc/nginx/sites-enabled/
 sudo rm /etc/nginx/sites-enabled/default
