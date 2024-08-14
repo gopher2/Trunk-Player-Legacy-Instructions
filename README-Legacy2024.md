@@ -19,7 +19,7 @@ sudo apt-get install fdkaac vim bc build-essential cmake git gnuradio-dev gr-osm
 ## Setup udev rules for the Airspy
 ```
 sudo usermod -a -G plugdev radio
-sudo bash -c 'echo SUBSYSTEM=="usb", ATTRS{idVendor}=="1d50", ATTRS{idProduct}=="60a1", GROUP="plugdev", MODE="0666", SYMLINK+="airspy-%K", MODE="660", GROUP="plugdev" > /etc/udev/rules.d/airspy.rules'
+sudo bash -c 'echo "SUBSYSTEM==\"usb\", ATTRS{idVendor}==\"1d50\", ATTRS{idProduct}==\"60a1\", GROUP=\"plugdev\", MODE=\"0660\", SYMLINK+=\"airspy-%k\"" > /etc/udev/rules.d/airspy.rules'
 sudo chmod u=rw,g=r,o=r /etc/udev/rules.d/airspy.rules
 sudo udevadm control --reload-rules
 ```
