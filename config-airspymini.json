@@ -17,7 +17,6 @@
                 "type": "p25",
                 "recordUnknown": true,
                 "shortName": "MPSCS",
-                "talkgroupsFile": "talkgroups.csv",
                 "uploadScript": "/home/radio/trunk-recorder-build/encode-local-sys-0.sh",
                 "talkgroupDisplayFormat": "tag_id",
                 "digitalLevels": 8
