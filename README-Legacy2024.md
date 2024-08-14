@@ -12,7 +12,7 @@ This will guide you on the process of installing Trunk-Recorder and Trunk-Player
 ```
 sudo apt-get update
 sudo apt-get upgrade
-sudo apt-get install fdkaac vim bc build-essential cmake git gnuradio-dev gr-osmosdr lame liborc-0.4-dev libffi-dev libboost-all-dev libcurl4-nss-dev libhackrf-dev libsndfile-dev libncurses-dev libpq-dev libssl-dev libuhd-dev libusb-1.0-0.dev nginx postgresql postgresql-client postgresql-client-common python3-dev python3-pip redis-server sox supervisor virtualenv
+sudo apt-get install fdkaac vim bc build-essential cmake git gnuradio-dev gr-osmosdr lame liborc-0.4-dev libffi-dev libboost-all-dev libcurl4-openssl-dev libhackrf-dev libsndfile1-dev libncurses-dev libpq-dev libssl-dev libuhd-dev libusb-1.0-0-dev nginx postgresql postgresql-client postgresql-client-common python3-dev python3-pip redis-server sox supervisor virtualenv
 
 ```
 
