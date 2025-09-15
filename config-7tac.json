@@ -1,0 +1,27 @@
+{
+    "ver": 2,
+    "sources": [{
+        "center": 769000000,
+        "rate": 32000000,
+        "error": 0,
+        "mixGain": 17,
+        "lnaGain": 17,
+        "gain": 17,
+        "digitalRecorders": 30,
+        "driver": "usrp",
+        "antenna": "RX2",
+        "signalDetectorThreshold": -100
+    }],
+    "systems": [{
+        "type": "conventional",
+        "shortName": "your_system",
+        "channels": [769143750],
+        "modulation": "qpsk",
+        "recordUnknown": true,
+        "audioArchive": true,
+        "unitTagsFile": "unit_tags.csv",
+        "callLog": true,
+        "squelch": -60
+    }],
+    "captureDir": "/Users/dave/audio"
+}

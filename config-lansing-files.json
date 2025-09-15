@@ -1,0 +1,29 @@
+{
+        "ver": 2,
+        "saveWav": true,
+        "saveM4a": false,
+        "saveP25": false,
+        "saveJson": true,
+        "p25CaptureMode": "voice",
+	"sources": [{
+                "center": 852525000,
+                "rate": 32000000,
+                "error": 0,
+                "gain": 42,
+                "digitalRecorders": 20,
+                "driver": "usrp",
+                "antenna": "RX2",
+		"modulation": "qpsk"
+        }],
+        "systems": [{
+                "control_channels": [851725000],
+                "type": "p25",
+                "recordUnknown": true,
+                "recordEncrypted": true,
+                "shortName": "MPSCS",
+                "talkgroupDisplayFormat": "tag_id",
+                "digitalLevels": 8,
+		"uploadScript": "/Users/dave/Documents/GitHub/trunk-recorder/build/encode-local-sys-0.sh"
+        }],
+"captureDir": "/Users/dave/Documents/GitHub/trunk-player/audio"
+}

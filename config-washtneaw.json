@@ -1,0 +1,29 @@
+{
+        "ver": 2,
+        "saveWav": false,
+        "saveM4a": false,
+        "saveP25": true,
+        "saveJson": true,
+        "p25CaptureMode": "all",
+	"sources": [{
+                "center": 852525000,
+                "rate": 32000000,
+                "error": 0,
+                "gain": 42,
+                "digitalRecorders": 20,
+                "driver": "usrp",
+                "antenna": "RX2",
+		"modulation": "qpsk"
+
+        }],
+        "systems": [{
+                "control_channels": [855287500],
+                "type": "p25",
+                "recordUnknown": true,
+                "recordEncrypted": true,
+                "shortName": "MPSCS",
+                "talkgroupDisplayFormat": "tag_id",
+                "digitalLevels": 8
+        }],
+"captureDir": "/Users/dave/dumps"
+}

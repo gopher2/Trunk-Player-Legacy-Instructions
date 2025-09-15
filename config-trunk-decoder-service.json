@@ -1,0 +1,19 @@
+{
+  "service_mode": "api",
+  "api_endpoint": "http://localhost:3000/api/v1/decode",
+  "api_port": 3000,
+  "auth_token": "your-secure-api-token-here",
+  "ssl_cert": "",
+  "ssl_key": "",
+  "foreground": false,
+  "enable_json": true,
+  "enable_wav": true,
+  "enable_text": true,
+  "output_dir": "./tmp/",
+  "quiet": false,
+  "verbose": true,
+  "process_encrypted": true,
+  "include_frame_analysis": true,
+  "audio_format": "wav",
+  "decryption_keys": []
+}
